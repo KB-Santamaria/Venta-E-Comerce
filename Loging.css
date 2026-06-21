@@ -1,0 +1,205 @@
+body{
+    margin: 0;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url("Img/Fondo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    font-family: Arial, sans-serif;
+}
+
+.contenedor-auth{
+    position: relative;
+    width: 600px;
+    height: 560px;
+    overflow: hidden;
+    background: rgba(48, 46, 46, 0.85);
+    border: 2px solid #e70d85;
+    border-radius: 20px;
+    box-shadow: 0 0 15px #e70d85;
+}
+
+.registro-panel{
+    overflow-y: auto;
+    padding-right: 40px;
+}
+
+
+.panel{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 30px;
+    box-sizing: border-box;
+
+    text-align: center;
+
+    transition: transform 0.6s ease;
+}
+
+.login-panel{
+    transform: translateX(0);
+    
+}
+
+.registro-panel{
+    transform: translateX(100%);
+}
+
+.contenedor-auth.activo .login-panel{
+    transform: translateX(-100%);
+}
+
+.contenedor-auth.activo .registro-panel{
+    transform: translateX(0);
+}
+
+.logo{
+    width: 500px; /* Ajusta el tamaño del logo según tus necesidades */
+    margin-bottom: -70px; /* Ajusta este valor según el tamaño de tu logo */
+    margin-top: -40px; /* Ajusta este valor para subir o bajar el logo */
+}
+
+p{
+    color: #ec1c8f;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+label{
+    display: block;
+    margin: 14px 0 8px;
+
+    color: #e47fbd;
+    font-size: 18px;
+    font-family: Georgia, sans-serif;
+}
+
+input,
+select{
+    width: 300px;
+    height: 40px;
+
+    padding-left: 10px;
+
+    border-radius: 8px;
+    border: none;
+
+    background-color: white;
+    color: #111;
+
+    transition: 0.3s;
+    box-sizing: border-box;
+}
+
+input:focus,
+select:focus{
+    outline: none;
+    box-shadow: 0 0 8px #dd3b8c;
+}
+
+.login-panel button{
+    display: block;
+    margin: 20px auto 15px auto;
+}
+
+select{
+    cursor: pointer;
+}
+
+option{
+    background-color: #111;
+    color: white;
+}
+
+button{
+    padding: 15px 25px;
+
+    background-color: #dd3b8c;
+    color: white;
+
+    border: none;
+    border-radius: 50px;
+
+    font-size: 16px;
+    cursor: pointer;
+
+    margin-top: 20px;
+    margin-bottom: 15px;
+
+    transition: all 0.3s ease;
+}
+
+button:hover{
+    background-color: white;
+    color: #dd3b8c;
+    box-shadow: 0 0 15px white;
+    transform: scale(1.05);
+}
+
+.enlaces{
+    margin-top: 10px;
+}
+
+.enlaces a,
+.panel a{
+    color: #e70d85;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.enlaces a:hover,
+.panel a:hover{
+    text-decoration: underline;
+    color: #f0e9ef;
+}
+
+.registro-panel h1{
+    color: #dd3b8c;
+    margin-bottom: 5px;
+}
+
+.registro-panel h2{
+    color: white;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.marca-agua{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    pointer-events: none;
+    z-index: 0;
+}
+
+.marca-agua img{
+    width: 500px;
+    opacity: 0.30;
+    filter: brightness(1.03);
+}
+
+.registro-panel h1,
+.registro-panel h2,
+.registro-panel label,
+.registro-panel input,
+.registro-panel select,
+.registro-panel button,
+.registro-panel p{
+    position: relative;
+    z-index: 2;
+}

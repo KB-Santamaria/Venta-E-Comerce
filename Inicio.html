@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Enlace a Font Awesome para iconos -->
+    <link rel="stylesheet" href="Inicio.css"> <!-- Enlace al archivo CSS -->
+    <title>Golondrina Varieties</title>
+    <link rel="icon" type="image/png" href="Img/Golondrina.png"> <!-- Icono de la página -->
+</head>
+
+<body>
+
+    <header class="navbar"> <!-- Barra de navegación -->
+
+        <div class="Menu" id="btnMenu">
+            ☰
+        </div>
+        <div class="Logo">
+            <img src="img/Slogan.png" alt="Logo de Golondrina Varieties">
+        </div>
+        <div class="acciones-navbar">
+            <div class="busqueda">
+                <input type="text" placeholder="Buscar...">
+            </div>
+            <button class="btn-Buscar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <div class="mi-cuenta">
+                <i class="fa-regular fa-user"></i>
+                <span>Mi perfil</span>
+            </div>
+            <button class="btn-carrito">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </button>
+
+        </div>
+    </header>
+
+
+    <section id="inicio">
+        <h1>Bienvenido a Golondrina Varieties</h1>
+    </section>
+
+
+    <main class="contenedor-productos"> <!-- Contenedor principal para las categorías de productos -->
+        <section id="camisas" class="categoria-productos">
+            <h2>Camisas</h2>
+
+            <div class="card-producto"> <!-- Tarjeta individual para cada producto -->
+                <img src="img/Camisa.jpg" alt="Camisa casual">
+                <h3>Camisa Casual</h3>
+                <p>C$450.00</p>
+                <button class="btn-ver_detalles">Ver detalles</button>
+                <button class="btn-carrito-producto">
+                    <i class="fa-solid fa-cart-plus"></i>
+                    <span>Añadir al carrito</span>
+                </button>
+            </div>
+        </section>
+
+        <section id="pantalones" class="categoria-productos">
+            <h2>Pantalones</h2>
+
+            <div class="card-producto">
+                <img src="img/Pantalon.png" alt="Pantalón jean">
+                <h3>Pantalón Jean</h3>
+                <p>C$850.00</p>
+                <button class="btn-ver_detalles">Ver detalles</button>
+                <button class="btn-carrito-producto">
+                    <i class="fa-solid fa-cart-plus"></i>
+                    <span>Añadir al carrito</span>
+                </button>
+            </div>
+        </section>
+
+        <section id="joyeria" class="categoria-productos">
+            <h2>Joyería</h2>
+
+            <div class="card-producto">
+                <img src="img/Collar.jpg" alt="Collar elegante">
+                <h3>Collar Elegante</h3>
+                <p>C$300.00</p>
+                <button class="btn-ver_detalles">Ver detalles</button>
+                <button class="btn-carrito-producto">
+                    <i class="fa-solid fa-cart-plus"></i>
+                    <span>Añadir al carrito</span>
+                </button>
+            </div>
+        </section>
+
+        <section id="bolsos" class="categoria-productos">
+            <h2>Bolsos</h2>
+
+            <div class="card-producto">
+                <img src="img/Bolso.jpg" alt="Bolso moderno">
+                <h3>Bolso Moderno</h3>
+                <p>C$650.00</p>
+                <button class="btn-ver_detalles">Ver detalles</button>
+                <button class="btn-carrito-producto">
+                    <i class="fa-solid fa-cart-plus"></i>
+                    <span>Añadir al carrito</span>
+                </button>
+            </div>
+        </section>
+
+        <section id="calzado" class="categoria-productos">
+            <h2>Calzado</h2>
+
+            <div class="card-producto">
+                <img src="img/Zapato.jpg" alt="Zapato casual">
+                <h3>Zapato Casual</h3>
+                <p>C$900.00</p>
+                <button class="btn-ver_detalles">Ver detalles</button>
+                <button class="btn-carrito-producto">
+                    <i class="fa-solid fa-cart-plus"></i>
+                    <span>Añadir al carrito</span>
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+
+    <div>
+
+        <aside class="sidebar" id="sidebar"> <!-- Barra lateral para categorías y opciones -->
+
+            <button class="btnInicio" onclick="mostrarInicio()">Inicio</button>
+            <!-- Botón para mostrar la sección de inicio -->
+            <button class="btnCategoria">Categorías</button> <!-- Botón para desplegar categorías -->
+            <div class="dropdown-content">
+                <a href="#" onclick="mostrarCategoria('camisas')">Camisas</a>
+                <!-- Enlaces para mostrar diferentes categorías -->
+                <a href="#" onclick="mostrarCategoria('pantalones')">Pantalones</a>
+                <a href="#" onclick="mostrarCategoria('joyeria')">Joyería</a>
+                <a href="#" onclick="mostrarCategoria('bolsos')">Bolsos</a>
+                <a href="#" onclick="mostrarCategoria('calzado')">Calzado</a>
+            </div>
+
+            <button class="btnAdministracion">Administración</button> <!-- Botón para desplegar opciones -->
+            <div class="dropdown-content"> <!-- Contenido desplegable para opciones -->
+                <!-- Enlaces para mostrar diferentes opciones -->
+                <a href="#" onclick="mostrarOpcion('Agregar-producto')">Agregar Producto</a>
+                <a href="#" onclick="mostrarOpcion('Crear-nuevo-rol')">Crear nuevo rol</a>
+                <a href="#" onclick="mostrarOpcion('Historial-total')">Historial total</a>
+                <a href="#" onclick="mostrarOpcion('Historial-por-mayor')">Historial al por mayor</a>
+                <a href="#" onclick="mostrarOpcion('Perfiles-registrados')">Registro de usuarios</a>
+
+
+            </div>
+        </aside>
+
+        <script src="Inicio.js"></script> <!-- Enlace al archivo JavaScript -->
+
+</body>
+
+</html>

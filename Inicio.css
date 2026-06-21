@@ -1,0 +1,262 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #020101;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.Slogan{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+}
+
+h1{
+    color: #dd3b8c;
+    font-size: 36px;
+}
+
+.navbar{
+    height: 80px;
+    background-color: #111111;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    border-bottom: 2px solid #dd3b8c;
+    position: relative;
+    z-index: 1000;
+}
+
+.acciones-navbar{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.Menu{
+    color: #dd3b8c;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 15px;
+}
+
+.busqueda input{
+    width: 250px;
+    height: 42px;
+    padding: 0 15px;
+    border: 2px solid transparent;
+    border-radius: 25px;
+    background-color: #ece6e6;
+    color: #111;
+    transition: all 0.3s ease;
+}
+
+.busqueda input:focus{
+    width: 300px;
+    outline: none;
+    border-color: #dd3b8c;
+    box-shadow: 0 0 15px rgba(221, 59, 140, 0.6);
+}
+
+.btn-Buscar,
+.btn-carrito{
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background-color: #e23192;
+    color: #f3edf0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-Buscar:hover, /* Estilo para el botón de búsqueda al pasar el mouse */
+.btn-carrito:hover{
+    background-color: #f1ebee;
+    color: rgb(236, 24, 148);
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #e6e2e4;
+}
+
+.mi-cuenta{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #f3ecef;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.mi-cuenta:hover{ /* Estilo para el enlace "Mi Cuenta" al pasar el mouse */
+    color: rgb(245, 239, 243);
+    background-color: #dd3b8c;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #dd3b8c;
+}
+
+.sidebar{
+    position: fixed;
+    top: 80px;
+    left: -250px;
+    width: 250px;
+    height: calc(100vh - 80px);
+    background-color: #111;
+    border-right: 2px solid #dd3b8c;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: 0.3s;
+    z-index: 999;
+    text-align: left;
+}
+
+.sidebar.activo{
+    left: 0;
+}
+
+.btnCategoria,
+.btnAdministracion,
+.btnInicio{
+    width: 100%;
+    background: transparent;
+    color: #dd3b8c;
+    border: none;
+    text-align: left;
+    font-size: 16px;
+    padding: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btnCategoria:hover,
+.btnAdministracion:hover,
+.btnInicio:hover{
+    color: white;
+    background-color: #dd3b8c;
+    transform: translateX(10px);
+    box-shadow: 0 0 15px #dd3b8c;
+}
+
+.btnCategoria::after,
+.btnAdministracion::after{
+    content: "▲";
+    float: right;
+    transition: transform 0.3s ease;
+}
+
+.btnCategoria.activo::after,
+.btnAdministracion.activo::after{
+    transform: rotate(180deg);
+}
+
+.dropdown-content{
+    display: none;
+    padding-left: 15px;
+}
+
+.dropdown-content.activo{
+    display: block;
+}
+
+.dropdown-content a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin: 10px 0;
+    transition: 0.3s;
+}
+
+.dropdown-content a:hover{
+    color: #dd3b8c;
+    padding-left: 10px;
+}
+
+.contenedor-productos{
+    padding: 30px;
+}
+
+.categoria-productos{
+    display: none;
+}
+
+.categoria-productos.activo{
+    display: block;
+}
+
+.categoria-productos h2{
+    color: #dd3b8c;
+}
+
+.card-producto{
+   width: 220px;
+    background-color: #111;
+    border: 1px solid #dd3b8c;
+    border-radius: 12px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.card-producto img{
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+}
+
+.card-producto h3{
+    color: #dd3b8c;
+}
+
+.card-producto button{
+    background-color: #dd3b8c;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.card-producto button:hover{
+    background-color: #eee7e7;
+    color: #dd3b8c;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #dd3b8c;
+}
+
+.btn-carrito-producto{ /* Estilo para el botón de carrito dentro de cada producto */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background-color: #dd3b8c;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 15px;
+}
+
+.btn-carrito-producto i{ /* Estilo para el ícono dentro del botón de carrito */
+    background-color: white;
+    color: #dd3b8c;
+
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+

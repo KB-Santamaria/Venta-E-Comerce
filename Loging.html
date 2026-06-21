@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golondrina Varieties</title>
+
+    <link rel="stylesheet" href="Loging.css">
+    <link rel="icon" type="image/png" href="Img/Golondrina.png">
+</head>
+
+<body>
+
+    <div class="contenedor-auth" id="contenedorAuth">
+
+        <!-- LOGIN -->
+        <div class="panel login-panel" action="php/Loging.php" method="POST">
+
+            <img src="Img/Slogan.png" alt="Logo de Golondrina Varieties" class="logo">
+
+            <p>Por favor, ingrese sus datos para iniciar sesión</p>
+
+            <label for="correoLogin">Ingrese su correo electrónico:</label>
+            <input type="email" id="correoLogin" name="usuario">
+
+            <label for="passwordLogin">Ingrese su contraseña:</label>
+            <input type="password" id="passwordLogin" name="contraseña">
+
+            <button type="submit">Ingresar</button>
+
+            <div class="enlaces">
+                <a href="#">¿Olvidaste tu contraseña?</a>
+                <a href="#" id="mostrarRegistro">¿No tienes cuenta? Regístrate aquí</a>
+            </div>
+
+        </div>
+
+        <!-- REGISTRO -->
+        <div class="panel registro-panel">
+
+            <div class="marca-agua">
+                <img src="Img/Golondrina.png" alt="Golondrina">
+            </div>
+
+            <h1>Golondrina Varieties</h1>
+            <h2>Crear cuenta</h2>
+
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" placeholder="Ingrese su nombre completo">
+
+            <label for="tipoDocumento">Tipo de documento</label>
+            <select id="tipoDocumento">
+                <option value="" disabled selected>Seleccione una opción</option>
+                <option value="cedula">Cédula Nicaragüense</option>
+                <option value="pasaporte">Pasaporte</option>
+            </select>
+
+            <label for="numeroDocumento">Número de documento</label>
+            <input type="text" id="numeroDocumento" placeholder="Ingrese su documento">
+
+            <label for="correoRegistro">Correo electrónico</label>
+            <input type="email" id="correoRegistro" placeholder="ejemplo@correo.com">
+
+            <label for="passwordRegistro">Contraseña</label>
+            <input type="password" id="passwordRegistro" placeholder="Ingrese su contraseña">
+
+            <label for="confirmarPassword">Confirmar contraseña</label>
+            <input type="password" id="confirmarPassword" placeholder="Confirme su contraseña">
+
+            <button type="Registrame">Registrarme</button>
+
+            <p>
+                ¿Ya tienes cuenta?
+                <a href="#" id="mostrarLogin">Inicia sesión aquí</a>
+            </p>
+
+        </div>
+
+    </div>
+
+    <script src="Loging.js"></script>
+</body>
+</html>
